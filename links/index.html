@@ -36,6 +36,20 @@ a.btn:hover{background:#22305a}
 a.plain{display:block;text-align:center;background:#fff;border:1.5px solid var(--linie);color:var(--navy);font-weight:600;padding:14px;border-radius:16px;text-decoration:none;margin-top:10px}
 footer{text-align:center;font-size:13px;color:var(--schiefer);margin-top:34px}
 footer a{color:var(--schiefer)}
+nav.chips{position:sticky;top:0;z-index:5;display:flex;gap:8px;overflow-x:auto;padding:10px 2px;margin:0 -2px 4px;background:var(--papier);scrollbar-width:none;-webkit-overflow-scrolling:touch}
+nav.chips::-webkit-scrollbar{display:none}
+nav.chips a{flex:none;font-size:14px;font-weight:600;color:var(--navy);text-decoration:none;background:#fff;border:1.5px solid var(--linie);border-radius:999px;padding:6px 14px}
+nav.chips a:hover,nav.chips a:focus-visible{border-color:var(--salbei)}
+section{scroll-margin-top:60px}
+h2 .count{font-weight:600;letter-spacing:0;text-transform:none;color:#8a93a3;margin-left:6px}
+.hint{font-size:14px;color:var(--schiefer);margin:-4px 4px 12px}
+.combo{display:flex;gap:14px;align-items:center;background:#fff;border:1.5px solid var(--linie);border-radius:16px;padding:12px;margin-bottom:12px}
+.combo img{width:64px;height:91px;object-fit:cover;border-radius:6px;flex:none;box-shadow:0 2px 6px rgba(22,33,62,.12)}
+.combo .btns{display:flex;flex-wrap:wrap;gap:8px;margin-top:8px}
+.combo .btns a{font-size:13px;font-weight:700;text-decoration:none;color:var(--navy);background:var(--salbei-hell);border:1.5px solid transparent;border-radius:999px;padding:5px 12px}
+.combo .btns a:hover,.combo .btns a:focus-visible{border-color:var(--salbei)}
+.combo .btns a.ws{background:var(--salbei)}
+.combo .btns .soon{font-size:13px;font-weight:600;color:#8a93a3;padding:5px 4px}
 </style>
 </head>
 <body>
@@ -48,146 +62,134 @@ footer a{color:var(--schiefer)}
 <p class="intro">Unterrichtsmaterial für die Grundschule: kopierfertig, differenziert und mit Lösungen.</p>
 </header>
 <main>
+<nav class="chips" aria-label="Bereiche"><a href="#neu">Neu</a><a href="#gratis">Gratis</a><a href="#pakete">Pakete</a><a href="#kunst">Kunst</a><a href="#sachunterricht">Sachunterricht</a><a href="#demokratie">Demokratie</a><a href="#ki">KI</a></nav>
+<section id="neu">
 <h2>Neu</h2>
+<a class="card" href="https://eduki.com/de/material/2414345/tiere-in-der-kunst-5-kunststunden-ohne-vorbereitung-kunst-klasse-2-4-duerer-hokusai-franz-marc-rousseau">
+<img src="tiere-kunststunden.jpg" alt="Cover: Tiere in der Kunst – 5 Kunststunden" width="64" height="91" loading="lazy">
+<span class="txt"><span class="t">🐾 Tiere in der Kunst – 5 Kunststunden</span><span class="s" style="display:block">Dürer, Hokusai, Franz Marc, Rousseau · ohne Vorbereitung</span><span class="pill">Einzelstunden Klasse 2–4</span></span><span class="arrow">→</span></a>
 <a class="card" href="https://eduki.com/de/material/2414289/tiere-in-der-kunst-kuenstler-werkstatt-kunst-klasse-2-4-duerer-hokusai-franz-marc-rousseau">
-<img src="tiere-kunst-werkstatt.jpg" alt="Cover: Tiere in der Kunst – Künstler-Werkstatt" width="64" height="91">
-<span class="txt"><span class="t">🐇 Tiere in der Kunst – Werkstatt</span><span class="s" style="display:block">Dürer, Hokusai, Franz Marc, Rousseau · ohne Wasserfarben</span><span class="pill">Neu · Werkstatt Klasse 2–4</span></span><span class="arrow">→</span></a>
+<img src="tiere-kunst-werkstatt.jpg" alt="Cover: Tiere in der Kunst – Werkstatt" width="64" height="91" loading="lazy">
+<span class="txt"><span class="t">🐇 Tiere in der Kunst – Werkstatt</span><span class="s" style="display:block">Dürer, Hokusai, Franz Marc, Rousseau · ohne Wasserfarben</span><span class="pill">Werkstatt Klasse 2–4</span></span><span class="arrow">→</span></a>
 <a class="card" href="https://eduki.com/de/material/2413921/winterbilder-entdecken-kuenstler-werkstatt-kunst-klasse-2-4-bruegel-monet-avercamp-hiroshige">
-<img src="winterbilder-werkstatt.jpg" alt="Cover: Winterbilder entdecken – Künstler-Werkstatt" width="64" height="91">
-<span class="txt"><span class="t">❄️ Winterbilder entdecken – Werkstatt</span><span class="s" style="display:block">Bruegel, Monet, Avercamp, Hiroshige · ohne Wasserfarben</span><span class="pill">Neu · Werkstatt Klasse 2–4</span></span><span class="arrow">→</span></a>
-<a class="card" href="https://eduki.com/de/material/2402157/arcimboldo-entdecken-kuenstler-werkstatt-kunst-klasse-2-4-obstgesichter-umkehrbild-collage">
-<img src="arcimboldo-werkstatt.jpg" alt="Cover: Arcimboldo entdecken – Künstler-Werkstatt" width="64" height="91">
-<span class="txt"><span class="t">🍎 Arcimboldo entdecken – Werkstatt</span><span class="s" style="display:block">Obstgesichter, Umkehrbild, Collage · 6 Stationen</span><span class="pill">Neu · Werkstatt Klasse 2–4</span></span><span class="arrow">→</span></a>
-<a class="card" href="https://eduki.com/de/material/2402108/giuseppe-arcimboldo-5-kunststunden-ohne-vorbereitung-kunst-klasse-2-4">
-<img src="arcimboldo-kunststunden.jpg" alt="Cover: Giuseppe Arcimboldo – 5 Kunststunden" width="64" height="91">
-<span class="txt"><span class="t">🍐 Giuseppe Arcimboldo – 5 Kunststunden</span><span class="s" style="display:block">Obst-Gesichter, Jahreszeiten, Meeres-Köpfe · ohne Vorbereitung</span><span class="pill">Neu · Einzelstunden Klasse 2–4</span></span><span class="arrow">→</span></a>
-<a class="card" href="https://eduki.com/de/material/2402012/rousseau-entdecken-kuenstler-werkstatt-kunst-klasse-2-4-dschungel-gruentoene-bildaufbau">
-<img src="rousseau-werkstatt.jpg" alt="Cover: Rousseau entdecken – Künstler-Werkstatt" width="64" height="91">
-<span class="txt"><span class="t">🌿 Rousseau entdecken – Werkstatt</span><span class="s" style="display:block">Dschungel, Grüntöne, Bildaufbau · 6 Stationen</span><span class="pill">Neu · Werkstatt Klasse 2–4</span></span><span class="arrow">→</span></a>
-<a class="card" href="https://eduki.com/de/material/2401955/henri-rousseau-5-kunststunden-ohne-vorbereitung-klasse-2-4-kunst-vertretungsstunde-dschungel">
-<img src="rousseau-kunststunden.jpg" alt="Cover: Henri Rousseau – 5 Kunststunden" width="64" height="91">
-<span class="txt"><span class="t">🐯 Henri Rousseau – 5 Kunststunden</span><span class="s" style="display:block">Dschungel, Fantasie, Selbstporträt · ohne Vorbereitung</span><span class="pill">Neu · Einzelstunden Klasse 2–4</span></span><span class="arrow">→</span></a>
-<a class="card" href="https://eduki.com/de/material/2391589/winter-in-der-kunst-5-kunststunden-ohne-vorbereitung-klasse-2-4-bruegel-monet-avercamp-friedrich-hiroshige">
-<img src="winter-kunststunden.jpg" alt="Cover: Winter in der Kunst – 5 Kunststunden" width="64" height="91">
-<span class="txt"><span class="t">❄️ Winter in der Kunst – 5 Kunststunden</span><span class="s" style="display:block">Bruegel, Monet, Avercamp, Friedrich, Hiroshige · ohne Vorbereitung</span><span class="pill">Neu · Einzelstunden Klasse 2–4</span></span><span class="arrow">→</span></a>
-<a class="card" href="https://eduki.com/de/material/2391348/die-wichtel-detektive-raetsel-rallye-vor-weihnachten-klasse-2-4-gratis">
-<img src="wichtel-detektive.jpg" alt="Cover: Die Wichtel-Detektive" width="64" height="91">
-<span class="txt"><span class="t">🔍 Die Wichtel-Detektive</span><span class="s" style="display:block">Rätsel-Rallye vor Weihnachten · Klasse 2–4</span><span class="pill gratis">Gratis</span></span><span class="arrow">→</span></a>
-<a class="card" href="https://eduki.com/de/material/2351854/25-kunststunden-ohne-vorbereitung-materialpaket-kunst-klasse-2-4-kandinsky-monet-klee-franz-marc-van-gogh">
-<img src="kunststunden-paket.jpg" alt="Cover: 25 Kunststunden ohne Vorbereitung" width="64" height="91">
-<span class="txt"><span class="t">🖌️ 25 Kunststunden ohne Vorbereitung</span><span class="s" style="display:block">Kandinsky, Monet, Klee, Franz Marc und Van Gogh · ideal für Vertretung</span><span class="pill">5 Sets · günstiger im Paket</span></span><span class="arrow">→</span></a>
+<img src="winterbilder-werkstatt.jpg" alt="Cover: Winterbilder entdecken – Werkstatt" width="64" height="91" loading="lazy">
+<span class="txt"><span class="t">❄️ Winterbilder entdecken – Werkstatt</span><span class="s" style="display:block">Bruegel, Monet, Avercamp, Hiroshige · ohne Wasserfarben</span><span class="pill">Werkstatt Klasse 2–4</span></span><span class="arrow">→</span></a>
+</section>
+<section id="pakete">
+<h2>Pakete · günstiger im Bundle</h2>
 <a class="card" href="https://eduki.com/de/material/2335169/kuenstler-entdecken-materialpaket-kunst-klasse-2-4-kandinsky-monet-klee-franz-marc-van-gogh">
-<img src="kuenstler-paket.jpg" alt="Cover: Künstler-Paket Klasse 2–4" width="64" height="91">
+<img src="kuenstler-paket.jpg" alt="Cover: Künstler-Paket Klasse 2–4" width="64" height="91" loading="lazy">
 <span class="txt"><span class="t">🎨 Künstler-Paket Klasse 2–4</span><span class="s" style="display:block">Kandinsky, Monet, Klee, Franz Marc und Van Gogh</span><span class="pill">5 Werkstätten · günstiger im Paket</span></span><span class="arrow">→</span></a>
+<a class="card" href="https://eduki.com/de/material/2351854/25-kunststunden-ohne-vorbereitung-materialpaket-kunst-klasse-2-4-kandinsky-monet-klee-franz-marc-van-gogh">
+<img src="kunststunden-paket.jpg" alt="Cover: 25 Kunststunden ohne Vorbereitung" width="64" height="91" loading="lazy">
+<span class="txt"><span class="t">🖌️ 25 Kunststunden ohne Vorbereitung</span><span class="s" style="display:block">Kandinsky, Monet, Klee, Franz Marc und Van Gogh · ideal für Vertretung</span><span class="pill">5 Sets · günstiger im Paket</span></span><span class="arrow">→</span></a>
 <a class="card" href="https://eduki.com/de/material/2326230/demokratie-paket-klasse-2-4-werkstatt-klassenrat-starterset-und-kinderrechte">
-<img src="demokratie-paket.jpg" alt="Cover: Demokratie-Paket" width="64" height="91">
+<img src="demokratie-paket.jpg" alt="Cover: Demokratie-Paket Klasse 2–4" width="64" height="91" loading="lazy">
 <span class="txt"><span class="t">🗳️ Demokratie-Paket Klasse 2–4</span><span class="s" style="display:block">Werkstatt, Klassenrat-Starterset und Kinderrechte</span><span class="pill">3 Materialien · günstiger im Paket</span></span><span class="arrow">→</span></a>
-<a class="card" href="https://eduki.com/de/material/2326162/klassenrat-starterset-ablaufplan-rollenkarten-protokoll-und-wandzeitung-klasse-2-4">
-<img src="klassenrat.jpg" alt="Cover: Klassenrat-Starterset" width="64" height="91">
-<span class="txt"><span class="t">Klassenrat-Starterset</span><span class="s" style="display:block">Ablaufplan, Rollenkarten, Protokoll und Wandzeitung · Klasse 2–4</span><span class="pill">13 Seiten</span></span><span class="arrow">→</span></a>
-<a class="card" href="https://eduki.com/de/material/2322895/wer-bestimmt-bei-uns-demokratie-erleben-werkstatt-klasse-3-4-klassenrat-abstimmen-kinderrechte">
-<img src="demokratie.jpg" alt="Cover: Wer bestimmt bei uns? Demokratie erleben" width="64" height="91">
-<span class="txt"><span class="t">Wer bestimmt bei uns?</span><span class="s" style="display:block">Demokratie erleben: Klassenrat, Abstimmen, Kinderrechte · Klasse 3/4</span><span class="pill">Werkstatt · 18 Seiten</span></span><span class="arrow">→</span></a>
 <a class="card" href="https://eduki.com/de/material/2322562/ki-paket-klasse-3-4-werkstatt-deepfakes-chatbots-und-ki-fuehrerschein">
-<img src="ki-paket.jpg" alt="Cover: KI-Paket Klasse 3/4" width="64" height="91">
+<img src="ki-paket.jpg" alt="Cover: KI-Paket Klasse 3/4" width="64" height="91" loading="lazy">
 <span class="txt"><span class="t">🤖 KI-Paket Klasse 3/4</span><span class="s" style="display:block">Werkstatt, Deepfakes, Chatbots und KI-Führerschein</span><span class="pill">5 Materialien · günstiger im Paket</span></span><span class="arrow">→</span></a>
+</section>
+<section id="kunst">
+<h2>Kunst · Klasse 2–4</h2>
+<p class="hint">Zu jedem Thema gibt es eine <b>Werkstatt</b> (Stationenlernen, ca. 20 Seiten) und <b>5 Kunststunden</b> ohne Vorbereitung.</p>
+<div class="combo">
+<img src="tiere-kunst-werkstatt.jpg" alt="Cover: Tiere in der Kunst" width="64" height="91" loading="lazy">
+<div class="txt"><div class="t">🐇 Tiere in der Kunst</div><div class="s">Dürer, Hokusai, Franz Marc, Rousseau</div><div class="btns"><a class="ws" href="https://eduki.com/de/material/2414289/tiere-in-der-kunst-kuenstler-werkstatt-kunst-klasse-2-4-duerer-hokusai-franz-marc-rousseau">Werkstatt →</a><a href="https://eduki.com/de/material/2414345/tiere-in-der-kunst-5-kunststunden-ohne-vorbereitung-kunst-klasse-2-4-duerer-hokusai-franz-marc-rousseau">5 Kunststunden →</a></div></div>
+</div>
+<div class="combo">
+<img src="winterbilder-werkstatt.jpg" alt="Cover: Winter in der Kunst" width="64" height="91" loading="lazy">
+<div class="txt"><div class="t">❄️ Winter in der Kunst</div><div class="s">Bruegel, Monet, Avercamp, Friedrich, Hiroshige</div><div class="btns"><a class="ws" href="https://eduki.com/de/material/2413921/winterbilder-entdecken-kuenstler-werkstatt-kunst-klasse-2-4-bruegel-monet-avercamp-hiroshige">Werkstatt →</a><a href="https://eduki.com/de/material/2391589/winter-in-der-kunst-5-kunststunden-ohne-vorbereitung-klasse-2-4-bruegel-monet-avercamp-friedrich-hiroshige">5 Kunststunden →</a></div></div>
+</div>
+<div class="combo">
+<img src="arcimboldo-werkstatt.jpg" alt="Cover: Giuseppe Arcimboldo" width="64" height="91" loading="lazy">
+<div class="txt"><div class="t">🍎 Giuseppe Arcimboldo</div><div class="s">Obstgesichter, Umkehrbild, Collage</div><div class="btns"><a class="ws" href="https://eduki.com/de/material/2402157/arcimboldo-entdecken-kuenstler-werkstatt-kunst-klasse-2-4-obstgesichter-umkehrbild-collage">Werkstatt →</a><a href="https://eduki.com/de/material/2402108/giuseppe-arcimboldo-5-kunststunden-ohne-vorbereitung-kunst-klasse-2-4">5 Kunststunden →</a></div></div>
+</div>
+<div class="combo">
+<img src="rousseau-werkstatt.jpg" alt="Cover: Henri Rousseau" width="64" height="91" loading="lazy">
+<div class="txt"><div class="t">🐯 Henri Rousseau</div><div class="s">Dschungel, Grüntöne, Bildaufbau</div><div class="btns"><a class="ws" href="https://eduki.com/de/material/2402012/rousseau-entdecken-kuenstler-werkstatt-kunst-klasse-2-4-dschungel-gruentoene-bildaufbau">Werkstatt →</a><a href="https://eduki.com/de/material/2401955/henri-rousseau-5-kunststunden-ohne-vorbereitung-klasse-2-4-kunst-vertretungsstunde-dschungel">5 Kunststunden →</a></div></div>
+</div>
+<div class="combo">
+<img src="van-gogh.jpg" alt="Cover: Vincent van Gogh" width="64" height="91" loading="lazy">
+<div class="txt"><div class="t">🌻 Vincent van Gogh</div><div class="s">Sonnenblumen, Sternennacht, Pinselstriche</div><div class="btns"><a class="ws" href="https://eduki.com/de/material/2331535/van-gogh-entdecken-kuenstler-werkstatt-kunst-klasse-2-4-sonnenblumen-sternennacht-pinselstriche-1">Werkstatt →</a><a href="https://eduki.com/de/material/2333445/van-gogh-5-kunststunden-ohne-vorbereitung-vertretungsstunde-kunst-klasse-2-4-mit-originalgemaelden">5 Kunststunden →</a></div></div>
+</div>
+<div class="combo">
+<img src="monet.jpg" alt="Cover: Claude Monet" width="64" height="91" loading="lazy">
+<div class="txt"><div class="t">🌸 Claude Monet</div><div class="s">Impressionismus, Seerosen, Malen im Freien</div><div class="btns"><a class="ws" href="https://eduki.com/de/material/2329208/monet-entdecken-kuenstler-werkstatt-kunst-klasse-2-4-impressionismus-seerosen-malen-im-freien">Werkstatt →</a><a href="https://eduki.com/de/material/2351746/claude-monet-5-kunststunden-ohne-vorbereitung-vertretungsstunde-kunst-klasse-2-4-mit-originalgemaelden">5 Kunststunden →</a></div></div>
+</div>
+<div class="combo">
+<img src="klee.jpg" alt="Cover: Paul Klee" width="64" height="91" loading="lazy">
+<div class="txt"><div class="t">🏰 Paul Klee</div><div class="s">Linie, Form und Farbe</div><div class="btns"><a class="ws" href="https://eduki.com/de/material/2329297/klee-entdecken-kuenstler-werkstatt-kunst-klasse-2-4-linie-form-und-farbe-burg-und-sonne">Werkstatt →</a><a href="https://eduki.com/de/material/2351824/paul-klee-5-kunststunden-ohne-vorbereitung-vertretungsstunde-kunst-klasse-2-4-mit-originalgemaelden">5 Kunststunden →</a></div></div>
+</div>
+<div class="combo">
+<img src="franz-marc.jpg" alt="Cover: Franz Marc" width="64" height="91" loading="lazy">
+<div class="txt"><div class="t">🐴 Franz Marc</div><div class="s">Blaues Pferd, Farben mit Bedeutung</div><div class="btns"><a class="ws" href="https://eduki.com/de/material/2329485/franz-marc-entdecken-kuenstler-werkstatt-kunst-klasse-2-4-blaues-pferd-blauer-reiter-farben">Werkstatt →</a><a href="https://eduki.com/de/material/2333995/franz-marc-5-kunststunden-ohne-vorbereitung-vertretungsstunde-kunst-klasse-2-4-mit-originalgemaelden">5 Kunststunden →</a></div></div>
+</div>
+<div class="combo">
+<img src="kandinsky.jpg" alt="Cover: Wassily Kandinsky" width="64" height="91" loading="lazy">
+<div class="txt"><div class="t">🔵 Wassily Kandinsky</div><div class="s">Farben, Formen, Kreise im Quadrat</div><div class="btns"><a class="ws" href="https://eduki.com/de/material/2329145/kandinsky-entdecken-kuenstler-werkstatt-kunst-klasse-2-4-farben-formen-kreise-im-quadrat">Werkstatt →</a><a href="https://eduki.com/de/material/2333930/kandinsky-5-kunststunden-ohne-vorbereitung-vertretungsstunde-kunst-klasse-2-4-mit-originalgemaelden">5 Kunststunden →</a></div></div>
+</div>
+</section>
+<section id="gratis">
 <h2>Gratis</h2>
 <a class="card" href="https://eduki.com/de/material/2391348/die-wichtel-detektive-raetsel-rallye-vor-weihnachten-klasse-2-4-gratis">
-<img src="wichtel-detektive.jpg" alt="Cover: Die Wichtel-Detektive" width="64" height="91">
+<img src="wichtel-detektive.jpg" alt="Cover: Die Wichtel-Detektive" width="64" height="91" loading="lazy">
 <span class="txt"><span class="t">🔍 Die Wichtel-Detektive</span><span class="s" style="display:block">Rätsel-Rallye vor Weihnachten · Klasse 2–4</span><span class="pill gratis">Gratis</span></span><span class="arrow">→</span></a>
-<a class="card" href="https://eduki.com/de/material/2321478/woher-kommt-halloween-gratis-vertretungsstunde-mit-kreuzwortraetsel-klasse-2-4-freebie">
-<img src="halloween.jpg" alt="Cover: Woher kommt Halloween?" width="64" height="91">
-<span class="txt"><span class="t">🎃 Woher kommt Halloween?</span><span class="s" style="display:block">Vertretungsstunde mit Kreuzworträtsel · Klasse 2–4</span><span class="pill gratis">Gratis</span></span><span class="arrow">→</span></a>
-<a class="card" href="https://eduki.com/de/material/2318341/der-igel-im-herbst-lesetext-lueckentext-und-sortierkarten-klasse-1-3-gratis">
-<img src="igel.jpg" alt="Cover: Der Igel im Herbst" width="64" height="91">
-<span class="txt"><span class="t">🦔 Der Igel im Herbst</span><span class="s" style="display:block">Lesetext, Lückentext und Sortierkarten · Klasse 1–3</span><span class="pill gratis">Gratis</span></span><span class="arrow">→</span></a>
 <a class="card" href="https://eduki.com/de/material/2323122/sankt-martin-lesetexte-in-2-niveaus-suchsel-und-laterne-klasse-1-3-gratis">
-<img src="sankt-martin.jpg" alt="Cover: Sankt Martin" width="64" height="91">
+<img src="sankt-martin.jpg" alt="Cover: Sankt Martin" width="64" height="91" loading="lazy">
 <span class="txt"><span class="t">🏮 Sankt Martin</span><span class="s" style="display:block">Lesetexte in 2 Niveaus, Karte und Teilen-Laterne · Klasse 1–3</span><span class="pill gratis">Gratis</span></span><span class="arrow">→</span></a>
 <a class="card" href="https://eduki.com/de/material/2322960/jedes-kind-hat-rechte-plakat-und-quiz-zum-tag-der-kinderrechte-klasse-2-4-gratis">
-<img src="kinderrechte.jpg" alt="Cover: Jedes Kind hat Rechte" width="64" height="91">
+<img src="kinderrechte.jpg" alt="Cover: Jedes Kind hat Rechte" width="64" height="91" loading="lazy">
 <span class="txt"><span class="t">Jedes Kind hat Rechte</span><span class="s" style="display:block">Plakat und Quiz zum Tag der Kinderrechte · Klasse 2–4</span><span class="pill gratis">Gratis</span></span><span class="arrow">→</span></a>
+<a class="card" href="https://eduki.com/de/material/2318341/der-igel-im-herbst-lesetext-lueckentext-und-sortierkarten-klasse-1-3-gratis">
+<img src="igel.jpg" alt="Cover: Der Igel im Herbst" width="64" height="91" loading="lazy">
+<span class="txt"><span class="t">🦔 Der Igel im Herbst</span><span class="s" style="display:block">Lesetext, Lückentext und Sortierkarten · Klasse 1–3</span><span class="pill gratis">Gratis</span></span><span class="arrow">→</span></a>
 <a class="card" href="https://eduki.com/de/material/2321266/ki-oder-nicht-ki-gratis-einstieg-kuenstliche-intelligenz-klasse-3-4">
-<img src="ki-oder-nicht-ki.jpg" alt="Cover: KI oder nicht KI?" width="64" height="91">
+<img src="ki-oder-nicht-ki.jpg" alt="Cover: KI oder nicht KI?" width="64" height="91" loading="lazy">
 <span class="txt"><span class="t">KI oder nicht KI?</span><span class="s" style="display:block">Gratis-Einstieg künstliche Intelligenz · Klasse 3/4</span><span class="pill gratis">Gratis</span></span><span class="arrow">→</span></a>
+<a class="card" href="https://eduki.com/de/material/2321478/woher-kommt-halloween-gratis-vertretungsstunde-mit-kreuzwortraetsel-klasse-2-4-freebie">
+<img src="halloween.jpg" alt="Cover: Woher kommt Halloween?" width="64" height="91" loading="lazy">
+<span class="txt"><span class="t">🎃 Woher kommt Halloween?</span><span class="s" style="display:block">Vertretungsstunde mit Kreuzworträtsel · Klasse 2–4</span><span class="pill gratis">Gratis</span></span><span class="arrow">→</span></a>
 <a class="card" href="https://eduki.com/de/material/2324168/die-uhr-wird-zurueckgestellt-zeitumstellung-im-herbst-mit-uhren-duo-und-klassenumfrage-klasse-2-4-gratis">
-<img src="zeitumstellung.jpg" alt="Cover: Die Uhr wird zurückgestellt" width="64" height="91">
+<img src="zeitumstellung.jpg" alt="Cover: Die Uhr wird zurückgestellt" width="64" height="91" loading="lazy">
 <span class="txt"><span class="t">🕒 Die Uhr wird zurückgestellt</span><span class="s" style="display:block">Zeitumstellung am 25.10. mit Uhren-Duo · Klasse 2–4</span><span class="pill gratis">Gratis</span></span><span class="arrow">→</span></a>
+</section>
+<section id="sachunterricht">
 <h2>Sachunterricht</h2>
 <a class="card" href="https://eduki.com/de/material/2318210/voegel-im-winter-lernwerkstatt-sachunterricht-klasse-3-4-standvoegel-zugvoegel-voegel-fuettern">
-<img src="voegel.jpg" alt="Cover: Vögel im Winter" width="64" height="91">
+<img src="voegel.jpg" alt="Cover: Vögel im Winter" width="64" height="91" loading="lazy">
 <span class="txt"><span class="t">🐦 Vögel im Winter</span><span class="s" style="display:block">Standvögel, Zugvögel, Vögel füttern · Klasse 3/4</span><span class="pill">Werkstatt · 18 Seiten</span></span><span class="arrow">→</span></a>
 <a class="card" href="https://eduki.com/de/material/2319707/weihnachten-frueher-und-heute-werkstatt-sachunterricht-klasse-2-4-zeit-und-wandel-1">
-<img src="weihnachten.jpg" alt="Cover: Weihnachten früher und heute" width="64" height="91">
+<img src="weihnachten.jpg" alt="Cover: Weihnachten früher und heute" width="64" height="91" loading="lazy">
 <span class="txt"><span class="t">Weihnachten früher und heute</span><span class="s" style="display:block">Werkstatt Zeit und Wandel · Klasse 2–4</span><span class="pill">Werkstatt · 18 Seiten</span></span><span class="arrow">→</span></a>
 <a class="card" href="https://eduki.com/de/material/2321305/forscherfrage-der-woche-winter-10-forscherfragen-mit-mini-experimenten-klasse-2-4">
-<img src="forscherfrage.jpg" alt="Cover: Forscherfrage der Woche: Winter" width="64" height="91">
+<img src="forscherfrage.jpg" alt="Cover: Forscherfrage der Woche: Winter" width="64" height="91" loading="lazy">
 <span class="txt"><span class="t">Forscherfrage der Woche: Winter</span><span class="s" style="display:block">10 Forscherfragen mit Mini-Experimenten · Klasse 2–4</span><span class="pill">16 Seiten</span></span><span class="arrow">→</span></a>
-<h2>Kunst · Werkstätten und Einzelstunden</h2>
-<a class="card" href="https://eduki.com/de/material/2414289/tiere-in-der-kunst-kuenstler-werkstatt-kunst-klasse-2-4-duerer-hokusai-franz-marc-rousseau">
-<img src="tiere-kunst-werkstatt.jpg" alt="Cover: Tiere in der Kunst – Künstler-Werkstatt" width="64" height="91">
-<span class="txt"><span class="t">🐇 Tiere in der Kunst – Werkstatt</span><span class="s" style="display:block">Dürer, Hokusai, Franz Marc, Rousseau · ohne Wasserfarben</span><span class="pill">Neu · Werkstatt Klasse 2–4</span></span><span class="arrow">→</span></a>
-<a class="card" href="https://eduki.com/de/material/2413921/winterbilder-entdecken-kuenstler-werkstatt-kunst-klasse-2-4-bruegel-monet-avercamp-hiroshige">
-<img src="winterbilder-werkstatt.jpg" alt="Cover: Winterbilder entdecken – Künstler-Werkstatt" width="64" height="91">
-<span class="txt"><span class="t">❄️ Winterbilder entdecken – Werkstatt</span><span class="s" style="display:block">Bruegel, Monet, Avercamp, Hiroshige · ohne Wasserfarben</span><span class="pill">Neu · Werkstatt Klasse 2–4</span></span><span class="arrow">→</span></a>
-<a class="card" href="https://eduki.com/de/material/2402157/arcimboldo-entdecken-kuenstler-werkstatt-kunst-klasse-2-4-obstgesichter-umkehrbild-collage">
-<img src="arcimboldo-werkstatt.jpg" alt="Cover: Arcimboldo entdecken – Künstler-Werkstatt" width="64" height="91">
-<span class="txt"><span class="t">🍎 Arcimboldo entdecken – Werkstatt</span><span class="s" style="display:block">Obstgesichter, Umkehrbild, Collage · 6 Stationen</span><span class="pill">Neu · Werkstatt Klasse 2–4</span></span><span class="arrow">→</span></a>
-<a class="card" href="https://eduki.com/de/material/2402108/giuseppe-arcimboldo-5-kunststunden-ohne-vorbereitung-kunst-klasse-2-4">
-<img src="arcimboldo-kunststunden.jpg" alt="Cover: Giuseppe Arcimboldo – 5 Kunststunden" width="64" height="91">
-<span class="txt"><span class="t">🍐 Giuseppe Arcimboldo – 5 Kunststunden</span><span class="s" style="display:block">Obst-Gesichter, Jahreszeiten, Meeres-Köpfe · ohne Vorbereitung</span><span class="pill">Neu · Einzelstunden Klasse 2–4</span></span><span class="arrow">→</span></a>
-<a class="card" href="https://eduki.com/de/material/2402012/rousseau-entdecken-kuenstler-werkstatt-kunst-klasse-2-4-dschungel-gruentoene-bildaufbau">
-<img src="rousseau-werkstatt.jpg" alt="Cover: Rousseau entdecken – Künstler-Werkstatt" width="64" height="91">
-<span class="txt"><span class="t">🌿 Rousseau entdecken – Werkstatt</span><span class="s" style="display:block">Dschungel, Grüntöne, Bildaufbau · 6 Stationen</span><span class="pill">Neu · Werkstatt Klasse 2–4</span></span><span class="arrow">→</span></a>
-<a class="card" href="https://eduki.com/de/material/2401955/henri-rousseau-5-kunststunden-ohne-vorbereitung-klasse-2-4-kunst-vertretungsstunde-dschungel">
-<img src="rousseau-kunststunden.jpg" alt="Cover: Henri Rousseau – 5 Kunststunden" width="64" height="91">
-<span class="txt"><span class="t">🐯 Henri Rousseau – 5 Kunststunden</span><span class="s" style="display:block">Dschungel, Fantasie, Selbstporträt · ohne Vorbereitung</span><span class="pill">Neu · Einzelstunden Klasse 2–4</span></span><span class="arrow">→</span></a>
-<a class="card" href="https://eduki.com/de/material/2391589/winter-in-der-kunst-5-kunststunden-ohne-vorbereitung-klasse-2-4-bruegel-monet-avercamp-friedrich-hiroshige">
-<img src="winter-kunststunden.jpg" alt="Cover: Winter in der Kunst – 5 Kunststunden" width="64" height="91">
-<span class="txt"><span class="t">❄️ Winter in der Kunst – 5 Kunststunden</span><span class="s" style="display:block">Bruegel, Monet, Avercamp, Friedrich, Hiroshige · ohne Vorbereitung</span><span class="pill">Neu · Einzelstunden Klasse 2–4</span></span><span class="arrow">→</span></a>
-<a class="card" href="https://eduki.com/de/material/2333445/van-gogh-5-kunststunden-ohne-vorbereitung-vertretungsstunde-kunst-klasse-2-4-mit-originalgemaelden">
-<img src="van-gogh-kunststunden.jpg" alt="Cover: Van Gogh – 5 Kunststunden" width="64" height="91">
-<span class="txt"><span class="t">🖌️ Van Gogh – 5 Kunststunden</span><span class="s" style="display:block">Ohne Vorbereitung, ideal für Vertretungsstunden</span><span class="pill">Neu · Einzelstunden Klasse 2–4</span></span><span class="arrow">→</span></a>
-<a class="card" href="https://eduki.com/de/material/2333930/kandinsky-5-kunststunden-ohne-vorbereitung-vertretungsstunde-kunst-klasse-2-4-mit-originalgemaelden">
-<img src="kandinsky-kunststunden.jpg" alt="Cover: Kandinsky – 5 Kunststunden" width="64" height="91">
-<span class="txt"><span class="t">🖌️ Kandinsky – 5 Kunststunden</span><span class="s" style="display:block">Ohne Vorbereitung, ideal für Vertretungsstunden</span><span class="pill">Neu · Einzelstunden Klasse 2–4</span></span><span class="arrow">→</span></a>
-<a class="card" href="https://eduki.com/de/material/2333995/franz-marc-5-kunststunden-ohne-vorbereitung-vertretungsstunde-kunst-klasse-2-4-mit-originalgemaelden">
-<img src="franz-marc-kunststunden.jpg" alt="Cover: Franz Marc – 5 Kunststunden" width="64" height="91">
-<span class="txt"><span class="t">🖌️ Franz Marc – 5 Kunststunden</span><span class="s" style="display:block">Ohne Vorbereitung, ideal für Vertretungsstunden</span><span class="pill">Neu · Einzelstunden Klasse 2–4</span></span><span class="arrow">→</span></a>
-<a class="card" href="https://eduki.com/de/material/2351746/claude-monet-5-kunststunden-ohne-vorbereitung-vertretungsstunde-kunst-klasse-2-4-mit-originalgemaelden">
-<img src="monet-kunststunden.jpg" alt="Cover: Monet – 5 Kunststunden" width="64" height="91">
-<span class="txt"><span class="t">🖌️ Monet – 5 Kunststunden</span><span class="s" style="display:block">Ohne Vorbereitung, ideal für Vertretungsstunden</span><span class="pill">Neu · Einzelstunden Klasse 2–4</span></span><span class="arrow">→</span></a>
-<a class="card" href="https://eduki.com/de/material/2351824/paul-klee-5-kunststunden-ohne-vorbereitung-vertretungsstunde-kunst-klasse-2-4-mit-originalgemaelden">
-<img src="klee-kunststunden.jpg" alt="Cover: Klee – 5 Kunststunden" width="64" height="91">
-<span class="txt"><span class="t">🖌️ Klee – 5 Kunststunden</span><span class="s" style="display:block">Ohne Vorbereitung, ideal für Vertretungsstunden</span><span class="pill">Neu · Einzelstunden Klasse 2–4</span></span><span class="arrow">→</span></a>
-<a class="card" href="https://eduki.com/de/material/2331535/van-gogh-entdecken-kuenstler-werkstatt-kunst-klasse-2-4-sonnenblumen-sternennacht-pinselstriche-1">
-<img src="van-gogh.jpg" alt="Cover: Van Gogh entdecken" width="64" height="91">
-<span class="txt"><span class="t">🌻 Van Gogh entdecken</span><span class="s" style="display:block">Sonnenblumen, Sternennacht und Pinselstriche</span><span class="pill">Neu · Werkstatt Klasse 2–4</span></span><span class="arrow">→</span></a>
-<a class="card" href="https://eduki.com/de/material/2329485/franz-marc-entdecken-kuenstler-werkstatt-kunst-klasse-2-4-blaues-pferd-blauer-reiter-farben">
-<img src="franz-marc.jpg" alt="Cover: Franz Marc entdecken" width="64" height="91">
-<span class="txt"><span class="t">🐴 Franz Marc entdecken</span><span class="s" style="display:block">Blaues Pferd, Blauer Reiter, Farben mit Bedeutung</span><span class="pill">Werkstatt Klasse 2–4</span></span><span class="arrow">→</span></a>
-<a class="card" href="https://eduki.com/de/material/2329297/klee-entdecken-kuenstler-werkstatt-kunst-klasse-2-4-linie-form-und-farbe-burg-und-sonne">
-<img src="klee.jpg" alt="Cover: Klee entdecken" width="64" height="91">
-<span class="txt"><span class="t">🏰 Klee entdecken</span><span class="s" style="display:block">Linie, Form und Farbe · Burg und Sonne</span><span class="pill">Werkstatt Klasse 2–4</span></span><span class="arrow">→</span></a>
-<a class="card" href="https://eduki.com/de/material/2329208/monet-entdecken-kuenstler-werkstatt-kunst-klasse-2-4-impressionismus-seerosen-malen-im-freien">
-<img src="monet.jpg" alt="Cover: Monet entdecken" width="64" height="91">
-<span class="txt"><span class="t">🌸 Monet entdecken</span><span class="s" style="display:block">Impressionismus, Seerosen, Malen im Freien</span><span class="pill">Werkstatt Klasse 2–4</span></span><span class="arrow">→</span></a>
-<a class="card" href="https://eduki.com/de/material/2329145/kandinsky-entdecken-kuenstler-werkstatt-kunst-klasse-2-4-farben-formen-kreise-im-quadrat">
-<img src="kandinsky.jpg" alt="Cover: Kandinsky entdecken" width="64" height="91">
-<span class="txt"><span class="t">🔵 Kandinsky entdecken</span><span class="s" style="display:block">Farben, Formen und Kreise im Quadrat</span><span class="pill">Werkstatt Klasse 2–4</span></span><span class="arrow">→</span></a>
+</section>
+<section id="demokratie">
+<h2>Demokratie</h2>
+<a class="card" href="https://eduki.com/de/material/2322895/wer-bestimmt-bei-uns-demokratie-erleben-werkstatt-klasse-3-4-klassenrat-abstimmen-kinderrechte">
+<img src="demokratie.jpg" alt="Cover: Wer bestimmt bei uns?" width="64" height="91" loading="lazy">
+<span class="txt"><span class="t">Wer bestimmt bei uns?</span><span class="s" style="display:block">Demokratie erleben: Klassenrat, Abstimmen, Kinderrechte · Klasse 3/4</span><span class="pill">Werkstatt · 18 Seiten</span></span><span class="arrow">→</span></a>
+<a class="card" href="https://eduki.com/de/material/2326162/klassenrat-starterset-ablaufplan-rollenkarten-protokoll-und-wandzeitung-klasse-2-4">
+<img src="klassenrat.jpg" alt="Cover: Klassenrat-Starterset" width="64" height="91" loading="lazy">
+<span class="txt"><span class="t">Klassenrat-Starterset</span><span class="s" style="display:block">Ablaufplan, Rollenkarten, Protokoll und Wandzeitung · Klasse 2–4</span><span class="pill">13 Seiten</span></span><span class="arrow">→</span></a>
+</section>
+<section id="ki">
 <h2>Künstliche Intelligenz · Klasse 3/4</h2>
 <a class="card" href="https://eduki.com/de/material/2321091/ki-verstehen-werkstatt-klasse-3-4-was-ist-ki-chancen-gefahren-und-fakes-erkennen">
-<img src="ki-verstehen.jpg" alt="Cover: KI verstehen" width="64" height="91">
+<img src="ki-verstehen.jpg" alt="Cover: KI verstehen" width="64" height="91" loading="lazy">
 <span class="txt"><span class="t">KI verstehen</span><span class="s" style="display:block">Was ist KI? Chancen, Gefahren, Fakes erkennen</span><span class="pill">Werkstatt · 18 Seiten</span></span><span class="arrow">→</span></a>
 <a class="card" href="https://eduki.com/de/material/2321167/was-ist-ein-deepfake-ki-kurz-erklaert-klasse-3-4-medienbildung">
-<img src="deepfake.jpg" alt="Cover: Was ist ein Deepfake?" width="64" height="91">
+<img src="deepfake.jpg" alt="Cover: Was ist ein Deepfake?" width="64" height="91" loading="lazy">
 <span class="txt"><span class="t">Was ist ein Deepfake?</span><span class="s" style="display:block">Fakes erkennen in einer Stunde</span><span class="pill">1,99 €</span></span><span class="arrow">→</span></a>
 <a class="card" href="https://eduki.com/de/material/2321233/was-darf-ich-einem-chatbot-sagen-ki-kurz-erklaert-klasse-3-4-datenschutz">
-<img src="chatbot.jpg" alt="Cover: Was darf ich einem Chatbot sagen?" width="64" height="91">
+<img src="chatbot.jpg" alt="Cover: Was darf ich einem Chatbot sagen?" width="64" height="91" loading="lazy">
 <span class="txt"><span class="t">Was darf ich einem Chatbot sagen?</span><span class="s" style="display:block">Persönliche Daten schützen</span><span class="pill">1,99 €</span></span><span class="arrow">→</span></a>
 <a class="card" href="https://eduki.com/de/material/2322102/ki-fuehrerschein-abschlusspruefung-mit-urkunde-und-fuehrerscheinkarten-klasse-3-4">
-<img src="ki-fuehrerschein.jpg" alt="Cover: KI-Führerschein" width="64" height="91">
+<img src="ki-fuehrerschein.jpg" alt="Cover: KI-Führerschein" width="64" height="91" loading="lazy">
 <span class="txt"><span class="t">KI-Führerschein</span><span class="s" style="display:block">Abschlussprüfung mit Urkunde und Führerscheinkarten</span><span class="pill">9 Seiten</span></span><span class="arrow">→</span></a>
+</section>
 <a class="btn" href="https://eduki.com/de/autor/5086863/michael-von-amafida">Alle Materialien auf eduki</a>
 <a class="plain" href="/qualitaet/">Unser Qualitätsanspruch</a>
 <a class="plain" href="mailto:hallo@amafida.de">Wünsche und Feedback: hallo@amafida.de</a>
