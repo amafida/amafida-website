@@ -16,13 +16,24 @@
 *{box-sizing:border-box}
 html{-webkit-text-size-adjust:100%}
 body{margin:0;background:var(--papier);color:var(--navy);font:400 16px/1.5 'PJS',system-ui,-apple-system,'Segoe UI',sans-serif}
-.wrap{max-width:520px;margin:0 auto;padding:40px 16px 32px}
-header{text-align:center;margin-bottom:28px}
-header svg{width:84px;height:auto}
-.name{font-family:'Outfit','PJS',system-ui,sans-serif;font-weight:500;font-size:30px;margin:10px 0 0;letter-spacing:.01em;line-height:1.1}
-.name a{color:inherit;text-decoration:none}
-.claim{font-size:15px;color:var(--schiefer);margin:2px 0 0}
-.intro{font-size:16px;color:var(--schiefer);margin:14px auto 0;max-width:24em}
+.wrap{max-width:520px;margin:0 auto;padding:16px 16px 32px}
+.st{--st-accent:#7FA99B}
+.st.scoledo{--st-accent:#D9604A}
+.st-in{max-width:var(--st-max,760px);margin:0 auto;padding:24px var(--st-pad,24px) 8px;display:flex;align-items:center;justify-content:space-between;gap:14px 24px;flex-wrap:wrap}
+.st-brand{display:inline-flex;align-items:center;gap:12px;text-decoration:none;color:#16213E}
+.st-brand .mark{width:56px;height:auto;flex:none}
+.st-text{display:flex;flex-direction:column;align-items:flex-start;gap:6px}
+.st-word{display:block;height:26px;width:auto}
+.st-wm{display:block;height:26px;font-family:'Outfit','PJS',system-ui,sans-serif;font-weight:500;font-size:36px;line-height:26px;letter-spacing:.01em}
+.st-tag{font:600 10px/1.2 'PJS',system-ui,sans-serif;letter-spacing:.16em;text-transform:uppercase;color:#4A5468;white-space:nowrap}
+.st-nav{display:flex;gap:22px;flex-wrap:wrap}
+.st-nav a{font:600 15px/1.4 'PJS',system-ui,sans-serif;color:#16213E;text-decoration:none;padding:6px 0;border-bottom:2px solid transparent}
+.st-nav a:hover,.st-nav a[aria-current="page"]{border-bottom-color:var(--st-accent)}
+.st a:focus-visible{outline:3px solid #3F7FC1;outline-offset:3px;border-radius:6px}
+@media (max-width:520px){.st-brand .mark{width:48px}.st-word,.st-wm{height:22px}.st-wm{font-size:30px;line-height:22px}.st-nav{gap:18px}.st-nav a{font-size:14.5px}}
+.pagehead{margin:0 0 22px}
+.pagehead h1{font-size:26px;line-height:1.2;letter-spacing:-.01em;margin:0}
+.intro{font-size:16px;color:var(--schiefer);margin:6px 0 0;max-width:30em}
 h2{font-size:13px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:var(--schiefer);margin:26px 4px 10px}
 a.card{display:flex;gap:14px;align-items:center;background:#fff;border:1.5px solid var(--linie);border-radius:16px;padding:12px;margin-bottom:12px;text-decoration:none;color:var(--navy);transition:border-color .15s,transform .15s}
 a.card:hover,a.card:focus-visible{border-color:var(--salbei);transform:translateY(-1px)}
@@ -55,14 +66,9 @@ h2 .count{font-weight:600;letter-spacing:0;text-transform:none;color:#8a93a3;mar
 </style>
 </head>
 <body>
+<header class="st scoledo" style="--st-max:520px;--st-pad:16px"><div class="st-in"><a class="st-brand" href="/scoledo/" aria-label="scoledo – smart school content, zur Startseite"><svg class="mark" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 84 64" aria-hidden="true" focusable="false"><defs><mask id="cRst" maskUnits="userSpaceOnUse" x="0" y="0" width="84" height="64"><rect width="84" height="64" fill="#fff"/><circle cx="30" cy="32" r="20" fill="none" stroke="#000" stroke-width="11"/></mask><mask id="cLst" maskUnits="userSpaceOnUse" x="0" y="0" width="84" height="64"><rect width="84" height="64" fill="#fff"/><path d="M48.82 51.32 A20 20 0 0 1 36.68 42.00" fill="none" stroke="#000" stroke-width="11"/></mask></defs><circle cx="54" cy="32" r="20" fill="none" stroke="#3F7FC1" stroke-width="6" mask="url(#cRst)"/><circle cx="30" cy="32" r="20" fill="none" stroke="#D9604A" stroke-width="6" mask="url(#cLst)"/><path d="M48.82 51.32 A20 20 0 0 1 36.68 42.00" fill="none" stroke="#3F7FC1" stroke-width="6"/><circle cx="76" cy="9" r="4.5" fill="#E9B949"/></svg><span class="st-text" aria-hidden="true"><span class="st-wm">scoledo</span><span class="st-tag">smart school content</span></span></a><nav class="st-nav" aria-label="Hauptnavigation"><a href="/links/" aria-current="page">Materialien</a><a href="/qualitaet/">Qualität</a><a href="https://eduki.com/de/autor/5086863/michael-von-amafida" rel="noopener">eduki</a></nav></div></header>
 <div class="wrap">
-<header>
-<svg class="mark" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 84 64" aria-hidden="true" focusable="false"><defs><mask id="cRlinks" maskUnits="userSpaceOnUse" x="0" y="0" width="84" height="64"><rect width="84" height="64" fill="#fff"/><circle cx="30" cy="32" r="20" fill="none" stroke="#000" stroke-width="11"/></mask><mask id="cLlinks" maskUnits="userSpaceOnUse" x="0" y="0" width="84" height="64"><rect width="84" height="64" fill="#fff"/><path d="M48.82 51.32 A20 20 0 0 1 36.68 42.00" fill="none" stroke="#000" stroke-width="11"/></mask></defs><circle cx="54" cy="32" r="20" fill="none" stroke="#3F7FC1" stroke-width="6" mask="url(#cRlinks)"/><circle cx="30" cy="32" r="20" fill="none" stroke="#D9604A" stroke-width="6" mask="url(#cLlinks)"/><path d="M48.82 51.32 A20 20 0 0 1 36.68 42.00" fill="none" stroke="#3F7FC1" stroke-width="6"/><circle cx="76" cy="9" r="4.5" fill="#E9B949"/></svg>
-
-<p class="name"><a href="/scoledo/">scoledo</a></p>
-<p class="claim">smart school content</p>
-<p class="intro">Unterrichtsmaterial für die Grundschule: kopierfertig, differenziert und mit Lösungen.</p>
-</header>
+<div class="pagehead"><h1>Alle Materialien</h1><p class="intro">Unterrichtsmaterial für die Grundschule: kopierfertig, differenziert und mit Lösungen.</p></div>
 <main>
 <nav class="chips" aria-label="Bereiche"><a href="#neu">Neu</a><a href="#gratis">Gratis</a><a href="#pakete">Pakete</a><a href="#kunst">Kunst</a><a href="#sachunterricht">Sachunterricht</a><a href="#demokratie">Demokratie</a><a href="#ki">KI</a></nav>
 <section id="neu">
