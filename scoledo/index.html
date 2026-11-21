@@ -29,13 +29,20 @@ a:focus-visible{outline:3px solid var(--himmel);outline-offset:3px;border-radius
 .display{font-family:'Outfit','PJS',system-ui,sans-serif;font-weight:500}
 
 /* Kopfzeile */
-.top{display:flex;align-items:center;justify-content:space-between;gap:16px;flex-wrap:wrap;padding-top:22px;padding-bottom:22px}
-.lockup{display:flex;align-items:center;gap:10px;text-decoration:none;color:var(--navy)}
-.lockup .mark{width:50px;height:auto}
-.wm{font-family:'Outfit','PJS',system-ui,sans-serif;font-weight:500;font-size:27px;letter-spacing:.01em;line-height:1}
-.top nav{display:flex;gap:22px;flex-wrap:wrap}
-.top nav a{font-weight:600;font-size:15px;text-decoration:none;padding:6px 0;border-bottom:2px solid transparent}
-.top nav a:hover{border-bottom-color:var(--koralle)}
+.st{--st-accent:#7FA99B}
+.st.scoledo{--st-accent:#D9604A}
+.st-in{max-width:var(--st-max,760px);margin:0 auto;padding:24px var(--st-pad,24px) 8px;display:flex;align-items:center;justify-content:space-between;gap:14px 24px;flex-wrap:wrap}
+.st-brand{display:inline-flex;align-items:center;gap:12px;text-decoration:none;color:#16213E}
+.st-brand .mark{width:56px;height:auto;flex:none}
+.st-text{display:flex;flex-direction:column;align-items:flex-start;gap:6px}
+.st-word{display:block;height:26px;width:auto}
+.st-wm{display:block;height:26px;font-family:'Outfit','PJS',system-ui,sans-serif;font-weight:500;font-size:36px;line-height:26px;letter-spacing:.01em}
+.st-tag{font:600 10px/1.2 'PJS',system-ui,sans-serif;letter-spacing:.16em;text-transform:uppercase;color:#4A5468;white-space:nowrap}
+.st-nav{display:flex;gap:22px;flex-wrap:wrap}
+.st-nav a{font:600 15px/1.4 'PJS',system-ui,sans-serif;color:#16213E;text-decoration:none;padding:6px 0;border-bottom:2px solid transparent}
+.st-nav a:hover,.st-nav a[aria-current="page"]{border-bottom-color:var(--st-accent)}
+.st a:focus-visible{outline:3px solid #3F7FC1;outline-offset:3px;border-radius:6px}
+@media (max-width:520px){.st-brand .mark{width:48px}.st-word,.st-wm{height:22px}.st-wm{font-size:30px;line-height:22px}.st-nav{gap:18px}.st-nav a{font-size:14.5px}}
 
 /* Hero */
 .hero{display:grid;grid-template-columns:minmax(0,1.1fr) minmax(0,.9fr);gap:48px;align-items:center;padding-top:48px;padding-bottom:88px}
@@ -126,19 +133,15 @@ body{font-size:16px}
 h1{font-size:42px}
 .lead{font-size:17px}
 .btn{width:100%}
-.top nav{gap:18px}
 }
 </style>
 </head>
 <body>
-<header class="wrap top">
-<a class="lockup" href="/scoledo/" aria-label="scoledo – Startseite"><svg class="mark" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 84 64" aria-hidden="true" focusable="false"><defs><mask id="cRtop" maskUnits="userSpaceOnUse" x="0" y="0" width="84" height="64"><rect width="84" height="64" fill="#fff"/><circle cx="30" cy="32" r="20" fill="none" stroke="#000" stroke-width="11"/></mask><mask id="cLtop" maskUnits="userSpaceOnUse" x="0" y="0" width="84" height="64"><rect width="84" height="64" fill="#fff"/><path d="M48.82 51.32 A20 20 0 0 1 36.68 42.00" fill="none" stroke="#000" stroke-width="11"/></mask></defs><circle cx="54" cy="32" r="20" fill="none" stroke="#3F7FC1" stroke-width="6" mask="url(#cRtop)"/><circle cx="30" cy="32" r="20" fill="none" stroke="#D9604A" stroke-width="6" mask="url(#cLtop)"/><path d="M48.82 51.32 A20 20 0 0 1 36.68 42.00" fill="none" stroke="#3F7FC1" stroke-width="6"/><circle cx="76" cy="9" r="4.5" fill="#E9B949"/></svg><span class="wm" aria-hidden="true">scoledo</span></a>
-<nav aria-label="Hauptnavigation"><a href="/links/">Materialien</a><a href="/qualitaet/">Qualität</a><a href="https://eduki.com/de/autor/5086863/michael-von-amafida" rel="noopener">eduki</a></nav>
-</header>
+<header class="st scoledo" style="--st-max:1120px;--st-pad:24px"><div class="st-in"><a class="st-brand" href="/scoledo/" aria-label="scoledo – smart school content, zur Startseite"><svg class="mark" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 84 64" aria-hidden="true" focusable="false"><defs><mask id="cRst" maskUnits="userSpaceOnUse" x="0" y="0" width="84" height="64"><rect width="84" height="64" fill="#fff"/><circle cx="30" cy="32" r="20" fill="none" stroke="#000" stroke-width="11"/></mask><mask id="cLst" maskUnits="userSpaceOnUse" x="0" y="0" width="84" height="64"><rect width="84" height="64" fill="#fff"/><path d="M48.82 51.32 A20 20 0 0 1 36.68 42.00" fill="none" stroke="#000" stroke-width="11"/></mask></defs><circle cx="54" cy="32" r="20" fill="none" stroke="#3F7FC1" stroke-width="6" mask="url(#cRst)"/><circle cx="30" cy="32" r="20" fill="none" stroke="#D9604A" stroke-width="6" mask="url(#cLst)"/><path d="M48.82 51.32 A20 20 0 0 1 36.68 42.00" fill="none" stroke="#3F7FC1" stroke-width="6"/><circle cx="76" cy="9" r="4.5" fill="#E9B949"/></svg><span class="st-text" aria-hidden="true"><span class="st-wm">scoledo</span><span class="st-tag">smart school content</span></span></a><nav class="st-nav" aria-label="Hauptnavigation"><a href="/links/">Materialien</a><a href="/qualitaet/">Qualität</a><a href="https://eduki.com/de/autor/5086863/michael-von-amafida" rel="noopener">eduki</a></nav></div></header>
 <main>
 <section class="wrap hero">
 <div>
-<p class="eyebrow">smart school content</p>
+<p class="eyebrow">Unterrichtsmaterial für die Grundschule</p>
 <h1>Material, das <span class="accent">staunen</span> lässt.</h1>
 <p class="lead">Unterrichtsmaterial für Kunst und Sachunterricht in der Grundschule: kopierfertig, differenziert und mit Lösungen. Damit Kinder selbst entdecken dürfen und du dich auf genau diese Momente konzentrieren kannst.</p>
 <div class="cta"><a class="btn primary" href="/links/">Zu den Materialien</a><a class="btn secondary" href="https://eduki.com/de/autor/5086863/michael-von-amafida" rel="noopener">Auf eduki ansehen</a></div>
