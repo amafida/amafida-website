@@ -39,8 +39,10 @@ a:focus-visible{outline:3px solid var(--himmel);outline-offset:3px;border-radius
 .st-wm{display:block;height:26px;font-family:'Outfit','PJS',system-ui,sans-serif;font-weight:500;font-size:36px;line-height:26px;letter-spacing:.01em}
 .st-tag{font:600 10px/1.2 'PJS',system-ui,sans-serif;letter-spacing:.16em;text-transform:uppercase;color:#4A5468;white-space:nowrap}
 .st-nav{display:flex;gap:22px;flex-wrap:wrap}
-.st-nav a{font:600 15px/1.4 'PJS',system-ui,sans-serif;color:#16213E;text-decoration:none;padding:6px 0;border-bottom:2px solid transparent}
-.st-nav a:hover,.st-nav a[aria-current="page"]{border-bottom-color:var(--st-accent)}
+.st-nav a{font:600 15px/1.4 'PJS',system-ui,sans-serif;color:#16213E;text-decoration:none;display:inline-flex;align-items:center;gap:4px;min-height:44px;padding:0 2px;text-decoration-thickness:2px;text-underline-offset:7px}
+.st-nav a:hover,.st-nav a[aria-current="page"]{text-decoration-line:underline;text-decoration-color:var(--st-accent)}
+.st-nav .ext{width:13px;height:13px;flex:none}
+.vh{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}
 .st a:focus-visible{outline:3px solid #3F7FC1;outline-offset:3px;border-radius:6px}
 @media (max-width:520px){.st-brand .mark{width:48px}.st-word,.st-wm{height:22px}.st-wm{font-size:30px;line-height:22px}.st-nav{gap:18px}.st-nav a{font-size:14.5px}}
 
@@ -60,24 +62,53 @@ h1 .accent{color:var(--koralle)}
 .fan{position:relative;margin:0;height:420px;display:flex;align-items:center;justify-content:center}
 .fan::before{content:"";position:absolute;width:380px;height:380px;border-radius:50%;background:var(--himmel-hell)}
 .fan::after{content:"";position:absolute;width:30px;height:30px;border-radius:50%;background:var(--senf);top:34px;right:14%}
-.fan img{position:relative;width:184px;height:auto;border-radius:10px;border:4px solid #fff;box-shadow:0 18px 40px rgba(22,33,62,.18)}
-.fan img+img{margin-left:-56px}
-.fan img:nth-child(1){transform:rotate(-8deg) translateY(18px)}
-.fan img:nth-child(2){z-index:2;transform:translateY(-14px)}
-.fan img:nth-child(3){transform:rotate(8deg) translateY(18px)}
+.fan a{position:relative;display:block;border-radius:10px}
+.fan img{display:block;width:184px;height:auto;border-radius:10px;border:4px solid #fff;box-shadow:0 18px 40px rgba(22,33,62,.18);transition:transform .15s}
+.fan a+a{margin-left:-56px}
+.fan a:nth-child(1){transform:rotate(-8deg) translateY(18px)}
+.fan a:nth-child(2){z-index:2;transform:translateY(-14px)}
+.fan a:nth-child(3){transform:rotate(8deg) translateY(18px)}
+.fan a:hover,.fan a:focus-visible{z-index:3}
+.fan a:hover img{transform:translateY(-4px)}
+.dot{width:10px;height:10px;border-radius:50%;background:var(--senf);margin-right:10px;flex:none}
 
 /* Angebot */
-section h2.title{font-family:'Outfit','PJS',system-ui,sans-serif;font-weight:500;font-size:36px;line-height:1.2;letter-spacing:-.01em;margin:0 0 28px}
+section h2.title{font-family:'Fraunces',Georgia,serif;font-style:italic;font-weight:400;font-size:48px;line-height:1.12;margin:0 0 28px}
 .offer{padding-bottom:96px}
 .cards{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:20px}
-.card{background:#fff;border:1.5px solid var(--linie);border-radius:22px;padding:28px 26px}
-.ring{display:block;width:40px;height:40px;border-radius:50%;border:6px solid var(--c);margin-bottom:20px}
+.card{display:flex;flex-direction:column;background:#fff;border:1.5px solid var(--linie);border-radius:22px;overflow:hidden;text-decoration:none;color:var(--navy);transition:border-color .15s,transform .15s,box-shadow .15s}
+a.card:hover,a.card:focus-visible{border-color:var(--c);transform:translateY(-2px);box-shadow:0 10px 30px rgba(22,33,62,.08)}
+.stage{height:196px;background:var(--t);display:flex;align-items:center;justify-content:center}
+.stage img{width:98px;height:auto;border-radius:6px;border:3px solid #fff;box-shadow:0 10px 22px rgba(22,33,62,.16)}
+.stage img+img{margin-left:-14px}
+.stage img:nth-child(1){transform:rotate(-6deg) translateY(6px)}
+.stage img:nth-child(2){position:relative;z-index:1;transform:translateY(-6px)}
+.stage img:nth-child(3){transform:rotate(6deg) translateY(6px)}
+.card .body{flex:1;display:flex;flex-direction:column;align-items:flex-start;padding:22px 24px 22px}
 .chip{display:inline-block;font-size:12px;font-weight:700;letter-spacing:.02em;padding:4px 11px;border-radius:999px;background:var(--t);color:var(--navy)}
 .card h3{font-family:'Outfit','PJS',system-ui,sans-serif;font-weight:500;font-size:23px;line-height:1.25;margin:14px 0 8px}
-.card p{margin:0;font-size:16px;color:var(--schiefer)}
+.card p{margin:0 0 18px;font-size:16px;color:var(--schiefer)}
+.go{margin-top:auto;align-self:stretch;padding-top:14px;border-top:1px solid var(--linie);display:flex;justify-content:space-between;align-items:center;gap:12px;font-weight:700;font-size:15px}
+.ar{color:var(--koralle);font-weight:700;font-size:20px;line-height:1}
 .c1{--c:var(--koralle);--t:var(--koralle-hell)}
-.c2{--c:var(--himmel);--t:var(--himmel-hell)}
-.c3{--c:var(--senf);--t:var(--senf-hell)}
+.c2{--c:var(--koralle);--t:var(--koralle-hell)}
+.c3{--c:var(--himmel);--t:var(--himmel-hell)}
+
+/* Gratis */
+.gratis{background:var(--senf-hell);padding:72px 0;scroll-margin-top:16px}
+.gratis h2.title{margin-bottom:12px}
+.glead{margin:0 0 28px;color:var(--schiefer);max-width:36em}
+.free{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:16px}
+.fcard{display:flex;align-items:center;gap:16px;background:#fff;border:1.5px solid transparent;border-radius:18px;padding:14px 16px 14px 14px;text-decoration:none;color:var(--navy);transition:border-color .15s,transform .15s}
+.fcard:hover,.fcard:focus-visible{border-color:var(--senf);transform:translateY(-1px)}
+.fcard img{width:64px;height:auto;border-radius:6px;box-shadow:0 2px 6px rgba(22,33,62,.12);flex:none}
+.ft{flex:1;min-width:0;display:flex;flex-direction:column;align-items:flex-start;gap:3px}
+.ft b{font-size:16px;line-height:1.3}
+.ft span{font-size:14px;line-height:1.45;color:var(--schiefer)}
+.ft .pill{margin-top:4px;background:var(--salbei-hell);color:var(--navy);border-radius:999px;padding:2px 10px;font-size:12px;font-weight:700}
+.outline{margin-top:24px;border:1.5px solid var(--navy);color:var(--navy);background:transparent}
+.outline:hover{background:#fff}
+.gratis+.offer{padding-top:80px}
 
 /* Haltung */
 .haltung{background:var(--salbei-hell);padding:88px 0}
@@ -99,7 +130,7 @@ section h2.title{font-family:'Outfit','PJS',system-ui,sans-serif;font-weight:500
 .band{background:var(--navy);color:#fff;border-radius:28px;padding:44px;display:flex;align-items:center;gap:32px;flex-wrap:wrap}
 .band .mark{width:84px;height:auto;flex:none}
 .band .txt{flex:1 1 320px}
-.band h2{font-family:'Outfit','PJS',system-ui,sans-serif;font-weight:500;font-size:30px;line-height:1.2;margin:0 0 6px}
+.band h2{font-family:'Fraunces',Georgia,serif;font-style:italic;font-weight:400;font-size:34px;line-height:1.15;margin:0 0 8px}
 .band p{margin:0;color:#C9CFDA}
 .band .cta{margin-top:0}
 .light{background:#fff;color:var(--navy)}
@@ -118,12 +149,14 @@ h1{font-size:50px}
 .fan{height:330px}
 .fan::before{width:290px;height:290px}
 .fan img{width:136px}
-.fan img+img{margin-left:-42px}
-.cards,.std{grid-template-columns:1fr}
+.fan a+a{margin-left:-42px}
+.cards,.std,.free{grid-template-columns:1fr}
+.gratis{padding:56px 0}
+.gratis+.offer{padding-top:56px}
 .haltung{padding:64px 0}
 .haltung .wrap{grid-template-columns:1fr;gap:20px}
 .haltung h2{font-size:36px}
-section h2.title{font-size:30px}
+section h2.title{font-size:36px}
 .standard{padding-top:72px;padding-bottom:64px}
 .offer{padding-bottom:72px}
 .band{padding:32px 26px}
@@ -137,28 +170,42 @@ h1{font-size:42px}
 </style>
 </head>
 <body>
-<header class="st scoledo" style="--st-max:1120px;--st-pad:24px"><div class="st-in"><a class="st-brand" href="/scoledo/" aria-label="scoledo – smart school content, zur Startseite"><svg class="mark" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 84 64" aria-hidden="true" focusable="false"><defs><mask id="cRst" maskUnits="userSpaceOnUse" x="0" y="0" width="84" height="64"><rect width="84" height="64" fill="#fff"/><circle cx="30" cy="32" r="20" fill="none" stroke="#000" stroke-width="11"/></mask><mask id="cLst" maskUnits="userSpaceOnUse" x="0" y="0" width="84" height="64"><rect width="84" height="64" fill="#fff"/><path d="M48.82 51.32 A20 20 0 0 1 36.68 42.00" fill="none" stroke="#000" stroke-width="11"/></mask></defs><circle cx="54" cy="32" r="20" fill="none" stroke="#3F7FC1" stroke-width="6" mask="url(#cRst)"/><circle cx="30" cy="32" r="20" fill="none" stroke="#D9604A" stroke-width="6" mask="url(#cLst)"/><path d="M48.82 51.32 A20 20 0 0 1 36.68 42.00" fill="none" stroke="#3F7FC1" stroke-width="6"/><circle cx="76" cy="9" r="4.5" fill="#E9B949"/></svg><span class="st-text" aria-hidden="true"><span class="st-wm">scoledo</span><span class="st-tag">smart school content</span></span></a><nav class="st-nav" aria-label="Hauptnavigation"><a href="/links/">Materialien</a><a href="/qualitaet/">Qualität</a><a href="https://eduki.com/de/autor/5086863/michael-von-amafida" rel="noopener">eduki</a></nav></div></header>
+<header class="st scoledo" style="--st-max:1120px;--st-pad:24px"><div class="st-in"><a class="st-brand" href="/scoledo/" aria-label="scoledo – smart school content, zur Startseite"><svg class="mark" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 84 64" aria-hidden="true" focusable="false"><defs><mask id="cRst" maskUnits="userSpaceOnUse" x="0" y="0" width="84" height="64"><rect width="84" height="64" fill="#fff"/><circle cx="30" cy="32" r="20" fill="none" stroke="#000" stroke-width="11"/></mask><mask id="cLst" maskUnits="userSpaceOnUse" x="0" y="0" width="84" height="64"><rect width="84" height="64" fill="#fff"/><path d="M48.82 51.32 A20 20 0 0 1 36.68 42.00" fill="none" stroke="#000" stroke-width="11"/></mask></defs><circle cx="54" cy="32" r="20" fill="none" stroke="#3F7FC1" stroke-width="6" mask="url(#cRst)"/><circle cx="30" cy="32" r="20" fill="none" stroke="#D9604A" stroke-width="6" mask="url(#cLst)"/><path d="M48.82 51.32 A20 20 0 0 1 36.68 42.00" fill="none" stroke="#3F7FC1" stroke-width="6"/><circle cx="76" cy="9" r="4.5" fill="#E9B949"/></svg><span class="st-text" aria-hidden="true"><span class="st-wm">scoledo</span><span class="st-tag">smart school content</span></span></a><nav class="st-nav" aria-label="Hauptnavigation"><a href="/scoledo/materialien/">Materialien</a><a href="/qualitaet/">Qualität</a><a href="https://eduki.com/de/autor/5086863/michael-von-amafida" rel="noopener">eduki<svg class="ext" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M7 17L17 7M9 7h8v8" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg><span class="vh"> (externe Seite)</span></a></nav></div></header>
 <main>
 <section class="wrap hero">
 <div>
 <p class="eyebrow">Unterrichtsmaterial für die Grundschule</p>
 <h1>Material, das <span class="accent">staunen</span> lässt.</h1>
 <p class="lead">Unterrichtsmaterial für Kunst und Sachunterricht in der Grundschule: kopierfertig, differenziert und mit Lösungen. Damit Kinder selbst entdecken dürfen und du dich auf genau diese Momente konzentrieren kannst.</p>
-<div class="cta"><a class="btn primary" href="/links/">Zu den Materialien</a><a class="btn secondary" href="https://eduki.com/de/autor/5086863/michael-von-amafida" rel="noopener">Auf eduki ansehen</a></div>
+<div class="cta"><a class="btn primary" href="/scoledo/materialien/">Zu den Materialien</a><a class="btn secondary" href="#gratis"><span class="dot" aria-hidden="true"></span>9 Gratis-Materialien testen</a></div>
 </div>
 <figure class="fan">
-<img src="/links/klee.jpg" alt="Cover: Paul Klee – Künstler-Werkstatt" width="240" height="340">
-<img src="/links/detektive.jpg" alt="Cover: Was machen Detektive?" width="240" height="340">
-<img src="/links/monet.jpg" alt="Cover: Claude Monet – Künstler-Werkstatt" width="240" height="340">
+<a href="https://eduki.com/de/material/2329297/klee-entdecken-kuenstler-werkstatt-kunst-klasse-2-4-linie-form-und-farbe-burg-und-sonne" rel="noopener"><img src="/links/klee.jpg" alt="Cover: Paul Klee – Künstler-Werkstatt, auf eduki ansehen" width="240" height="340"></a>
+<a href="https://eduki.com/de/material/2419203/was-machen-detektive-berufe-entdecken-stationen-mit-detektivausweis-sachunterricht-klasse-2-4" rel="noopener"><img src="/links/detektive.jpg" alt="Cover: Was machen Detektive?, auf eduki ansehen" width="240" height="340"></a>
+<a href="https://eduki.com/de/material/2329208/monet-entdecken-kuenstler-werkstatt-kunst-klasse-2-4-impressionismus-seerosen-malen-im-freien" rel="noopener"><img src="/links/monet.jpg" alt="Cover: Claude Monet – Künstler-Werkstatt, auf eduki ansehen" width="240" height="340"></a>
 </figure>
+</section>
+
+<section class="gratis" id="gratis" aria-labelledby="gratis-titel">
+<div class="wrap">
+<p class="eyebrow">Gratis · direkt auf eduki</p>
+<h2 class="title" id="gratis-titel">Erst mal gratis ausprobieren</h2>
+<p class="glead">9 Materialien kostenlos auf eduki. So siehst du in Ruhe, wie scoledo im Unterricht funktioniert.</p>
+<div class="free">
+<a class="fcard" href="https://eduki.com/de/material/2391193/klassen-adventskalender-24-tuerchen-mit-5-minuten-aufgaben-klasse-2-4-gratis" rel="noopener"><img src="/links/adventskalender.jpg" alt="" width="240" height="340" loading="lazy"><span class="ft"><b>Klassen-Adventskalender</b><span>24 Türchen mit 5-Minuten-Aufgaben · Klasse 2–4</span><span class="pill">Gratis</span></span><span class="ar" aria-hidden="true">→</span></a>
+<a class="fcard" href="https://eduki.com/de/material/2391348/die-wichtel-detektive-raetsel-rallye-vor-weihnachten-klasse-2-4-gratis" rel="noopener"><img src="/links/wichtel-detektive.jpg" alt="" width="240" height="340" loading="lazy"><span class="ft"><b>Die Wichtel-Detektive</b><span>Rätsel-Rallye vor Weihnachten · Klasse 2–4</span><span class="pill">Gratis</span></span><span class="ar" aria-hidden="true">→</span></a>
+<a class="fcard" href="https://eduki.com/de/material/2419305/mein-jahr-2026-jahresrueckblick-wuensche-fuer-2027-gratis-klasse-2-4" rel="noopener"><img src="/links/mein-jahr-2026.jpg" alt="" width="240" height="340" loading="lazy"><span class="ft"><b>Mein Jahr 2026</b><span>Jahresrückblick &amp; Wünsche für 2027 · Klasse 2–4</span><span class="pill">Gratis</span></span><span class="ar" aria-hidden="true">→</span></a>
+</div>
+<a class="btn outline" href="/scoledo/materialien/#gratis">Alle 9 Gratis-Materialien</a>
+</div>
 </section>
 
 <section class="wrap offer" aria-labelledby="angebot">
 <h2 class="title" id="angebot">Was dich erwartet</h2>
 <div class="cards">
-<article class="card c1"><span class="ring" aria-hidden="true"></span><span class="chip">Kunst · Klasse 2–4</span><h3>Künstler-Werkstätten</h3><p>Stationenlernen zu großen Künstlern, von Monet und Klee bis Matisse. Rund 20 Seiten pro Werkstatt, mit Lösungen.</p></article>
-<article class="card c2"><span class="ring" aria-hidden="true"></span><span class="chip">Kunst · Klasse 2–4</span><h3>Kunststunden ohne Vorbereitung</h3><p>Zu jedem Künstler fünf Einzelstunden, die sofort funktionieren. Ideal auch für die Vertretung.</p></article>
-<article class="card c3"><span class="ring" aria-hidden="true"></span><span class="chip">Sachunterricht · Klasse 2–4</span><h3>Sachunterricht zum Entdecken</h3><p>Berufe, Demokratie, Kinderrechte und KI: Werkstätten, in denen Kinder selbst forschen, fragen und mitreden.</p></article>
+<a class="card c1" href="/scoledo/materialien/#kunst"><span class="stage" aria-hidden="true"><img src="/links/klee.jpg" alt="" width="240" height="340" loading="lazy"><img src="/links/monet.jpg" alt="" width="240" height="340" loading="lazy"><img src="/links/matisse-werkstatt.jpg" alt="" width="240" height="340" loading="lazy"></span><div class="body"><span class="chip">Kunst · Klasse 2–4</span><h3>Künstler-Werkstätten</h3><p>Stationenlernen zu großen Künstlern, von Monet und Klee bis Matisse. Rund 20 Seiten pro Werkstatt, mit Lösungen.</p><span class="go">Alle 11 Werkstätten ansehen<span class="ar" aria-hidden="true">→</span></span></div></a>
+<a class="card c2" href="/scoledo/materialien/#kunst"><span class="stage" aria-hidden="true"><img src="/links/klee-kunststunden.jpg" alt="" width="240" height="340" loading="lazy"><img src="/links/van-gogh-kunststunden.jpg" alt="" width="240" height="340" loading="lazy"><img src="/links/franz-marc-kunststunden.jpg" alt="" width="240" height="340" loading="lazy"></span><div class="body"><span class="chip">Kunst · Klasse 2–4</span><h3>Kunststunden ohne Vorbereitung</h3><p>Zu jedem Künstler fünf Einzelstunden, die sofort funktionieren. Ideal auch für die Vertretung.</p><span class="go">Alle 11 Stunden-Sets ansehen<span class="ar" aria-hidden="true">→</span></span></div></a>
+<a class="card c3" href="/scoledo/materialien/#sachunterricht"><span class="stage" aria-hidden="true"><img src="/links/detektive.jpg" alt="" width="240" height="340" loading="lazy"><img src="/links/demokratie.jpg" alt="" width="240" height="340" loading="lazy"><img src="/links/ki-verstehen.jpg" alt="" width="240" height="340" loading="lazy"></span><div class="body"><span class="chip">Sachunterricht · Klasse 2–4</span><h3>Sachunterricht zum Entdecken</h3><p>Berufe, Demokratie, Kinderrechte und KI: Werkstätten, in denen Kinder selbst forschen, fragen und mitreden.</p><span class="go">Alle 11 Materialien ansehen<span class="ar" aria-hidden="true">→</span></span></div></a>
 </div>
 </section>
 
@@ -186,7 +233,7 @@ h1{font-size:42px}
 <div class="band">
 <svg class="mark" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 84 64" aria-hidden="true" focusable="false"><defs><mask id="cRband" maskUnits="userSpaceOnUse" x="0" y="0" width="84" height="64"><rect width="84" height="64" fill="#fff"/><circle cx="30" cy="32" r="20" fill="none" stroke="#000" stroke-width="11"/></mask><mask id="cLband" maskUnits="userSpaceOnUse" x="0" y="0" width="84" height="64"><rect width="84" height="64" fill="#fff"/><path d="M48.82 51.32 A20 20 0 0 1 36.68 42.00" fill="none" stroke="#000" stroke-width="11"/></mask></defs><circle cx="54" cy="32" r="20" fill="none" stroke="#3F7FC1" stroke-width="6" mask="url(#cRband)"/><circle cx="30" cy="32" r="20" fill="none" stroke="#D9604A" stroke-width="6" mask="url(#cLband)"/><path d="M48.82 51.32 A20 20 0 0 1 36.68 42.00" fill="none" stroke="#3F7FC1" stroke-width="6"/><circle cx="76" cy="9" r="4.5" fill="#E9B949"/></svg>
 <div class="txt"><h2 id="alle">Alle Materialien auf einen Blick</h2><p>Werkstätten, Kunststunden, Pakete und Gratis-Material, sortiert nach Thema.</p></div>
-<div class="cta"><a class="btn light" href="/links/">Zur Übersicht</a><a class="btn ghost" href="https://eduki.com/de/autor/5086863/michael-von-amafida" rel="noopener">Profil auf eduki</a></div>
+<div class="cta"><a class="btn light" href="/scoledo/materialien/">Zur Übersicht</a><a class="btn ghost" href="https://eduki.com/de/autor/5086863/michael-von-amafida" rel="noopener">Profil auf eduki</a></div>
 </div>
 </section>
 </main>
