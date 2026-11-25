@@ -1,0 +1,25 @@
+name: Aktualitäts-Check
+
+# Läuft bei jeder Änderung (Pull Request und Push auf main),
+# jeden Montagmorgen für Datums-Themen (Saisonales, Jahreswechsel)
+# und auf Knopfdruck unter Actions → Aktualitäts-Check → Run workflow.
+on:
+  pull_request:
+  push:
+    branches: [main]
+  schedule:
+    - cron: '17 6 * * 1'
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  pruefen:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Zahlen, Jahreszahlen und saisonale Inhalte prüfen
+        env:
+          TZ: Europe/Berlin
+        run: python3 .github/scripts/aktualitaet.py
