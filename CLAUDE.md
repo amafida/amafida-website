@@ -28,6 +28,8 @@ Statische Website auf GitHub Pages (Domain amafida.de, Datei `CNAME`). Keine Bui
 3. Regeln für neue Inhalte:
    - Neue Materialien zuerst in den Katalog, bei Neu oder Gratis zusätzlich auf `/links/`.
    - Jede Zahl im Fließtext, die sich aus dem Katalog ergibt, als `<span data-zaehle="NAME">ZAHL</span>` schreiben. Zähler: `neu`, `pakete`, `kunst`, `gratis`, `sachunterricht`, `werkstaetten`, `kunststunden`, `alle`.
+   - In Buttons und Kartenzeilen (`.btn`, `.go`, `.chip`, alles mit `display:flex`) Zahl und Text gemeinsam in ein eigenes `<span>` packen, sonst verschwinden die Leerzeichen: `<a class="btn"><span>Alle <span data-zaehle="gratis">9</span> Gratis-Materialien</span></a>`.
+   - Vor dem Commit geänderte Seiten bei 390 und 1280 px rendern und ansehen, nicht nur den Quelltext prüfen.
    - Saisonales mit `data-gueltig-bis="JJJJ-MM-TT"` am Link (`<a …>`) markieren.
 
 Derselbe Check läuft auf GitHub bei jedem Pull Request, bei jedem Push auf main und jeden Montagmorgen (`.github/workflows/aktualitaet.yml`).

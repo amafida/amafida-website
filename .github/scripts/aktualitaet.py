@@ -102,6 +102,14 @@ for p in seiten():
         return m.group(0)
     neu_src = re.sub(r'<span data-zaehle="([a-z]+)">(\d+)</span>', zahl, neu_src)
 
+    # 1b) Zahl direkt in einem Flex-Element (Button, Kartenzeile): dort gehen die Leerzeichen
+    #     um die Zahl verloren („Alle9Gratis-Materialien“). Zahl und Text gehören in ein eigenes <span>.
+    FLEX = r'class="[^"]*\b(?:btn|go|chip)\b[^"]*"[^>]*>(?:<span[^>]*></span>)?'
+    for m in re.finditer(FLEX + r'(?:[^<]*[^<\s][^<]*<span data-zaehle="[a-z]+">|<span data-zaehle="[a-z]+">\d+</span>[^<]*[^<\s])', neu_src):
+        text = sichtbar('<x ' + m.group(0))[:60].strip()
+        fehler.append((p, f'Zahl ohne eigene Hülle in Button oder Kartenzeile („{text}…“): '
+                          'Leerzeichen gehen verloren. Zahl und Text gemeinsam in <span>…</span> packen.'))
+
     # 2) Abschnittszähler im Katalog
     if p == KATALOG:
         for sid, (g, karten) in abschnitte.items():
